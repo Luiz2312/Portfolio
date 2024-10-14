@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+:root {
+  --bg-color: #0b090a;
+  --second-bg-color: #161a1d;
+  --text-color: #b1a7a6;
+  --main-color: #a4161a;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color);
+  color: var(--text-color);
+  width: auto;
+  height: 100vh;
+}
+.sucess {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 100px;
+  background-color: var(--second-bg-color);
+  border-radius: 15px;
+  width: 30vw;
+  height: 40vh;
+}
+.sucess video {
+  height: 25vh;
+  width: 20vw;
+}
+
+.sucess h1 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animation-text 1s forwards;
+  animation-delay: 2s;
+  transition: animation-text 0.5s ease-in;
+
+  height: 0;
+  overflow: hidden;
+}
+
+@keyframes animation-text {
+  0% {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  100% {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+  }
+}
+@media (max-width: 1285px) {
+  .sucess {
+    width: auto;
+    height: 60vh;
+  }
+  .sucess video {
+    height: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .sucess {
+    width: 60vw;
+    height: 50vh;
+  }
+  .sucess video {
+    height: 30vh;
+    width: 60vw;
+  }
+}
+@media (max-width: 895px) {
+  .sucess {
+    height: 55vh;
+    width: 60vw;
+  }
+
+  .sucess video {
+    height: 100vh;
+    width: 50vw;
+  }
+}
